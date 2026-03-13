@@ -18,33 +18,33 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        background: scrolled ? "rgba(10,10,10,0.9)" : "rgba(10,10,10,0.6)",
+        background: scrolled ? "rgba(37,37,37,0.92)" : "rgba(37,37,37,0.6)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
-        borderBottom: scrolled ? "1px solid rgba(38,38,38,0.5)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(238,238,238,0.06)" : "none",
       }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-display text-2xl font-extrabold tracking-tight gradient-accent-text">
+        <a href="#" className="font-display text-2xl font-extrabold tracking-tight text-[#eeeeee]">
           motim
         </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#sobre" className="text-sm text-motim-muted hover:text-white transition-colors duration-300">Sobre</a>
-          <a href="#servicos" className="text-sm text-motim-muted hover:text-white transition-colors duration-300">Serviços</a>
-          <a href="#processo" className="text-sm text-motim-muted hover:text-white transition-colors duration-300">Processo</a>
-          <a href="#resultados" className="text-sm text-motim-muted hover:text-white transition-colors duration-300">Resultados</a>
-          <a href="#contato" className="inline-flex items-center gap-2 gradient-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-orange-500/20 hover:scale-105 transition-all duration-300">
-            <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+          <a href="#sobre" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Sobre</a>
+          <a href="#servicos" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Serviços</a>
+          <a href="#processo" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Processo</a>
+          <a href="#resultados" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Resultados</a>
+          <a href="#contato" className="inline-flex items-center gap-2 bg-[#dae536] text-[#252525] text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300">
+            <span className="w-1.5 h-1.5 bg-[#252525] rounded-full"></span>
             Falar com a Motim
           </a>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-[#eeeeee] p-2"
           aria-label="Menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -61,13 +61,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-motim-border/50">
-          <div className="px-6 py-6 flex flex-col gap-4" style={{ background: "rgba(10,10,10,0.95)" }}>
-            <a href="#sobre" onClick={closeMenu} className="text-motim-muted hover:text-white transition-colors py-2">Sobre</a>
-            <a href="#servicos" onClick={closeMenu} className="text-motim-muted hover:text-white transition-colors py-2">Serviços</a>
-            <a href="#processo" onClick={closeMenu} className="text-motim-muted hover:text-white transition-colors py-2">Processo</a>
-            <a href="#resultados" onClick={closeMenu} className="text-motim-muted hover:text-white transition-colors py-2">Resultados</a>
-            <a href="#contato" onClick={closeMenu} className="inline-flex items-center justify-center gap-2 gradient-accent text-white text-sm font-semibold px-5 py-3 rounded-full mt-2">
+        <div className="md:hidden border-t border-[#eeeeee]/5">
+          <div className="px-6 py-6 flex flex-col gap-4" style={{ background: "rgba(37,37,37,0.95)" }}>
+            <a href="#sobre" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Sobre</a>
+            <a href="#servicos" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Serviços</a>
+            <a href="#processo" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Processo</a>
+            <a href="#resultados" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Resultados</a>
+            <a href="#contato" onClick={closeMenu} className="inline-flex items-center justify-center gap-2 bg-[#dae536] text-[#252525] text-sm font-semibold px-5 py-3 rounded-full mt-2">
               Falar com a Motim
             </a>
           </div>

@@ -1,12 +1,12 @@
 const placeholders = [
-  { aspect: "aspect-[3/4]", gradient: "from-[#FF6B35]/20 via-motim-card to-motim-surface", icon: "image", label: "Resultado de cliente" },
-  { aspect: "aspect-square", gradient: "from-[#E91E76]/15 via-motim-card to-motim-surface", icon: "video", label: "Bastidores" },
-  { aspect: "aspect-[4/5]", gradient: "from-motim-card via-[#FF6B35]/10 to-motim-surface", icon: "star", label: "Depoimento" },
-  { aspect: "aspect-[3/4]", gradient: "from-motim-surface via-motim-card to-[#E91E76]/10", icon: "image", label: "Print de resultado" },
-  { aspect: "aspect-square", gradient: "from-[#FF6B35]/15 via-motim-card to-motim-surface", icon: "check", label: "Case de sucesso" },
-  { aspect: "aspect-[3/4]", gradient: "from-[#E91E76]/10 via-motim-card to-motim-surface", icon: "image", label: "Foto de bastidores" },
-  { aspect: "aspect-square", gradient: "from-motim-surface to-[#FF6B35]/10", icon: "chat", label: "Depoimento Google" },
-  { aspect: "aspect-[4/5]", gradient: "from-motim-card via-[#E91E76]/10 to-motim-surface", icon: "chart", label: "Métricas de crescimento" },
+  { aspect: "aspect-[3/4]", icon: "image", label: "Resultado de cliente" },
+  { aspect: "aspect-square", icon: "video", label: "Bastidores" },
+  { aspect: "aspect-[4/5]", icon: "star", label: "Depoimento" },
+  { aspect: "aspect-[3/4]", icon: "image", label: "Print de resultado" },
+  { aspect: "aspect-square", icon: "check", label: "Case de sucesso" },
+  { aspect: "aspect-[3/4]", icon: "image", label: "Foto de bastidores" },
+  { aspect: "aspect-square", icon: "chat", label: "Depoimento Google" },
+  { aspect: "aspect-[4/5]", icon: "chart", label: "Métricas de crescimento" },
 ];
 
 function PlaceholderIcon({ type }: { type: string }) {
@@ -57,20 +57,13 @@ export default function SocialProof() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16 reveal">
-          <span
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6"
-            style={{
-              background: "rgba(255,107,53,0.08)",
-              border: "1px solid rgba(255,107,53,0.15)",
-              color: "#FF6B35",
-            }}
-          >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 bg-[#eeeeee]/[0.04] border border-[#eeeeee]/10 text-[#eeeeee]/70">
             Resultados
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#eeeeee] leading-tight">
             Marcas que já cresceram
             <br className="hidden sm:block" />
-            <span className="gradient-accent-text">com a Motim</span>
+            <span className="text-[#dae536]"> com a Motim</span>
           </h2>
         </div>
 
@@ -79,11 +72,11 @@ export default function SocialProof() {
           {placeholders.map((item, i) => (
             <div
               key={i}
-              className="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer border border-motim-border"
+              className="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer border border-[#eeeeee]/8"
             >
-              <div className={`relative ${item.aspect} bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
+              <div className={`relative ${item.aspect} bg-motim-surface flex items-center justify-center`}>
                 <div className="text-center p-4">
-                  <div className="w-12 h-12 mx-auto rounded-full bg-white/5 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 mx-auto rounded-full bg-[#eeeeee]/5 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                     <PlaceholderIcon type={item.icon} />
                   </div>
                   <p className="text-xs text-motim-dim">{item.label}</p>

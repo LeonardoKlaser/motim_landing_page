@@ -2,18 +2,18 @@
 
 /* ══════════════════════════════════════════════
    MOTIM — Global Styles & Design Tokens
+   Nova Identidade: Monocromático + Verde Lima
    ══════════════════════════════════════════════ */
 
 @theme {
-  --color-motim-bg: #0A0A0A;
-  --color-motim-surface: #141414;
-  --color-motim-card: #1A1A1A;
-  --color-motim-border: #262626;
-  --color-motim-accent1: #FF6B35;
-  --color-motim-accent2: #E91E76;
-  --color-motim-text: #FAFAFA;
-  --color-motim-muted: #A0A0A0;
-  --color-motim-dim: #606060;
+  --color-motim-bg: #252525;
+  --color-motim-surface: #2a2a2a;
+  --color-motim-card: #2f2f2f;
+  --color-motim-border: #3a3a3a;
+  --color-motim-accent: #dae536;
+  --color-motim-text: #eeeeee;
+  --color-motim-muted: #999999;
+  --color-motim-dim: #666666;
 
   --font-display: var(--font-outfit), system-ui, sans-serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
@@ -35,14 +35,14 @@
   }
 
   ::selection {
-    background-color: var(--color-motim-accent1);
+    background-color: var(--color-motim-accent);
     color: var(--color-motim-bg);
   }
 
   /* ── Scrollbar ── */
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #0A0A0A; }
-  ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: #252525; }
+  ::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: #555; }
 }
 
@@ -53,19 +53,22 @@
     font-family: var(--font-display);
   }
 
-  /* Gradient Accent */
-  .gradient-accent {
-    background: linear-gradient(135deg, #FF6B35, #E91E76);
+  /* Accent Background (verde lima — use com moderação) */
+  .accent-bg {
+    background-color: #dae536;
   }
 
-  .gradient-accent-text {
-    background: linear-gradient(135deg, #FF6B35, #E91E76);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Accent Text (verde lima) */
+  .accent-text {
+    color: #dae536;
   }
 
-  /* Gradient Border */
+  /* Subtle Border (for card depth) */
+  .subtle-border {
+    border: 1px solid rgba(238, 238, 238, 0.08);
+  }
+
+  /* Gradient Border — hover reveal (monocromático) */
   .gradient-border {
     position: relative;
   }
@@ -76,7 +79,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #FF6B35, #E91E76);
+    background: linear-gradient(135deg, rgba(238,238,238,0.15), rgba(218,229,54,0.3));
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -94,15 +97,15 @@
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.025;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
   }
 
-  /* Process Line */
+  /* Process Line (monocromático com toque de verde) */
   .process-line {
-    background: linear-gradient(90deg, #FF6B35, #E91E76);
+    background: linear-gradient(90deg, rgba(238,238,238,0.2), #dae536, rgba(238,238,238,0.2));
   }
 
   /* Animations */

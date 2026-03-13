@@ -9,30 +9,21 @@ function WhatsAppIcon() {
 export default function Cta() {
   return (
     <section id="contato" className="relative overflow-hidden py-28 lg:py-36 bg-motim-bg">
-      {/* Gradient Background */}
+      {/* Subtle monochrome ambient glow */}
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-10"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(255,107,53,0.3) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(233,30,118,0.3) 0%, transparent 50%)",
-        }}
-      />
-
-      {/* Noise */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage:
-            'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")',
+            "radial-gradient(ellipse at 30% 50%, rgba(238,238,238,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(218,229,54,0.08) 0%, transparent 50%)",
         }}
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="reveal">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-8">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#eeeeee] leading-tight mb-8">
             Sua marca merece mais do que posts.
             <br />
-            <span className="gradient-accent-text">Ela merece estratégia.</span>
+            Ela merece <span className="text-[#dae536]">estratégia.</span>
           </h2>
 
           <p className="text-motim-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
@@ -42,14 +33,14 @@ export default function Cta() {
 
           {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Motim!"
+            href="https://wa.me/5548999165373?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Motim!"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 gradient-accent text-white font-bold px-10 py-5 rounded-full text-lg hover:shadow-2xl hover:shadow-orange-500/30 hover:scale-105 transition-all duration-300"
+            className="group inline-flex items-center gap-3 bg-[#dae536] text-[#252525] font-bold px-10 py-5 rounded-full text-lg hover:shadow-2xl hover:shadow-[#dae536]/25 hover:scale-105 transition-all duration-300"
           >
             <WhatsAppIcon />
             Falar com a Motim no WhatsApp
-            <span className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <span className="w-8 h-8 bg-[#252525]/15 rounded-full flex items-center justify-center group-hover:bg-[#252525]/25 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

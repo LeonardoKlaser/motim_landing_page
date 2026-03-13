@@ -16,24 +16,24 @@ function WhatsAppIconSmall() {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-motim-border/30 bg-motim-bg">
+    <footer className="border-t border-[#eeeeee]/5 bg-motim-bg">
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <a href="#" className="font-display text-xl font-extrabold gradient-accent-text">
+          <a href="#" className="font-display text-xl font-extrabold text-[#eeeeee]">
             motim
           </a>
           <p className="text-sm text-motim-dim">
             &copy; 2025 Motim. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-motim-muted hover:text-white transition-colors" aria-label="Instagram">
+            <a href="#" className="text-motim-muted hover:text-[#eeeeee] transition-colors" aria-label="Instagram">
               <InstagramIcon />
             </a>
             <a
               href="https://wa.me/5500000000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-motim-muted hover:text-white transition-colors"
+              className="text-motim-muted hover:text-[#eeeeee] transition-colors"
               aria-label="WhatsApp"
             >
               <WhatsAppIconSmall />
