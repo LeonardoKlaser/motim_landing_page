@@ -25,14 +25,16 @@ export default function Hero() {
         <div
           className="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full animate-drift opacity-15 z-[3]"
           style={{
-            background: "radial-gradient(circle, rgba(238,238,238,0.08) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(238,238,238,0.08) 0%, transparent 70%)",
             filter: "blur(100px)",
           }}
         />
         <div
           className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] rounded-full animate-pulse-orb opacity-10 z-[3]"
           style={{
-            background: "radial-gradient(circle, rgba(218,229,54,0.12) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(218,229,54,0.12) 0%, transparent 70%)",
             filter: "blur(100px)",
           }}
         />
@@ -62,9 +64,9 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="animate-fade-in-up delay-200 text-base md:text-lg text-motim-muted leading-relaxed max-w-2xl mb-10">
-            Na Motim nós planejamos, produzimos e executamos tudo que a sua marca precisa
-            para crescer nas redes sociais: estratégia, conteúdo, vídeos, fotografia, design
-            e presença digital.
+            Na Motim nós planejamos, produzimos e executamos tudo que a sua
+            marca precisa para crescer nas redes sociais: estratégia, conteúdo,
+            vídeos, fotografia, design e presença digital.
           </p>
 
           {/* CTA */}
@@ -75,8 +77,18 @@ export default function Hero() {
             >
               Quero levar minha marca para o próximo nível
               <span className="w-8 h-8 bg-[#252525]/15 rounded-full flex items-center justify-center group-hover:bg-[#252525]/25 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </span>
             </a>
@@ -96,7 +108,13 @@ export default function Hero() {
         <div className="animate-marquee flex items-center gap-12 whitespace-nowrap">
           {Array.from({ length: 6 }).map((_, i) => (
             <span key={i} className="contents">
-              <span className={`font-display text-6xl lg:text-8xl font-extrabold ${i % 2 === 0 ? "text-[#eeeeee]/[0.06]" : "text-[#eeeeee]/[0.02]"}`}>
+              <span
+                className={`font-display text-6xl lg:text-8xl font-extrabold ${
+                  i % 2 === 0
+                    ? "text-[#eeeeee]/[0.06]"
+                    : "text-[#eeeeee]/[0.02]"
+                }`}
+              >
                 motim
               </span>
               <span className="text-motim-dim text-2xl">&#x2726;</span>
