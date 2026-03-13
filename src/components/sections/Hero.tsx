@@ -1,18 +1,36 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <>
       {/* ═══════════ HERO ═══════════ */}
-      <section className="relative min-h-screen overflow-hidden bg-noise flex items-center bg-motim-bg">
+      <section className="relative min-h-screen overflow-hidden flex items-center">
+        {/* ── Cinematic Background Image (P&B + Overlay) ── */}
+        <Image
+          src="/assets/hero-section/hero-bg_1.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover grayscale"
+          sizes="100vw"
+        />
+
+        {/* Dark overlay — motim-bg (#252525) at 80% opacity */}
+        <div className="absolute inset-0 bg-motim-bg/80 z-[1]" />
+
+        {/* Subtle noise texture on top of overlay */}
+        <div className="absolute inset-0 bg-noise z-[2] pointer-events-none" />
+
         {/* Subtle monochrome glow */}
         <div
-          className="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full animate-drift opacity-15"
+          className="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full animate-drift opacity-15 z-[3]"
           style={{
             background: "radial-gradient(circle, rgba(238,238,238,0.08) 0%, transparent 70%)",
             filter: "blur(100px)",
           }}
         />
         <div
-          className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] rounded-full animate-pulse-orb opacity-10"
+          className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] rounded-full animate-pulse-orb opacity-10 z-[3]"
           style={{
             background: "radial-gradient(circle, rgba(218,229,54,0.12) 0%, transparent 70%)",
             filter: "blur(100px)",
@@ -20,13 +38,13 @@ export default function Hero() {
         />
 
         {/* Giant Watermark */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none select-none z-[1]">
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none select-none z-[4]">
           <p className="font-display font-extrabold text-[12rem] md:text-[20rem] lg:text-[28rem] leading-none text-[#eeeeee]/[0.02] whitespace-nowrap -mb-12 md:-mb-20 lg:-mb-32">
             MOTIM
           </p>
         </div>
 
-        {/* Content */}
+        {/* ── Content (foreground) ── */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-20 lg:pt-0 lg:pb-0">
           {/* Badge */}
           <div className="animate-fade-in-up mb-8">
