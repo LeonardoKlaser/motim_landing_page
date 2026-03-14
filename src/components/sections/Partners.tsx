@@ -52,7 +52,7 @@ const partners: Partner[] = [
     name: "Gabriela",
     role: "Co-fundadora & Diretora Criativa",
     bio: "Gabi é a fundadora da Motim, mente criativa e estrategista por trás da agência. Especialista em marketing e posicionamento de marcas, lidera o desenvolvimento das estratégias que estruturam cada projeto, unindo visão de marca, conteúdo e direção criativa. Seu trabalho é transformar negócios em marcas fortes, com presença digital consistente, comunicação estratégica e posicionamento claro no mercado.",
-    photo: "/assets/socios/foto_socio_1.jpeg",
+    photo: "/assets/socios/foto_socio_2.jpeg",
   },
   {
     name: "André",
@@ -77,7 +77,11 @@ function PartnerCard({ partner }: { partner: Partner }) {
             alt={partner.name}
             fill
             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            style={partner.photoPosition ? { objectPosition: partner.photoPosition } : undefined}
+            style={
+              partner.photoPosition
+                ? { objectPosition: partner.photoPosition }
+                : undefined
+            }
             sizes="(max-width: 768px) 256px, 288px"
           />
 
