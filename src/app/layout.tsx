@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Motim — Marketing e Conteúdo Estratégico",
   description:
     "Planejamos, produzimos e executamos tudo que a sua marca precisa para crescer nas redes sociais.",
+  icons: {
+    icon: "/assets/logos/logo_m_noBackground.png",
+  },
 };
 
 export default function RootLayout({

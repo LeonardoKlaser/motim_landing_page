@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ServiceCard {
   number: string;
   title: string;
@@ -16,8 +18,7 @@ const services: ServiceCard[] = [
     titleBreak: "Estratégico",
     description:
       "O social media é o centro do trabalho da Motim. Mais do que postar conteúdos,",
-    highlight:
-      "estruturamos o posicionamento da sua marca nas redes sociais",
+    highlight: "estruturamos o posicionamento da sua marca nas redes sociais",
     deliverables: [
       "Planejamento estratégico mensal",
       "Pilares de comunicação",
@@ -52,8 +53,7 @@ const services: ServiceCard[] = [
     titleBreak: "de Marca",
     description:
       "Uma marca forte começa com um posicionamento claro e uma identidade visual consistente. Desenvolvemos",
-    highlight:
-      "identidades visuais que traduzem a essência da empresa",
+    highlight: "identidades visuais que traduzem a essência da empresa",
     deliverables: [
       "Identidade visual",
       "Logotipo",
@@ -83,23 +83,43 @@ const services: ServiceCard[] = [
 
 function ArrowIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M17 8l4 4m0 0l-4 4m4-4H3"
+      />
     </svg>
   );
 }
 
 function ChevronIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M9 5l7 7-7 7"
+      />
     </svg>
   );
 }
 
 function DeliverableTag({ text }: { text: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs text-motim-muted bg-motim-bg border border-[#eeeeee]/8 rounded-full px-3 py-1.5">
+    <span className="inline-flex items-center gap-1.5 text-xs text-motim-muted bg-[#252525]/60 backdrop-blur-sm border border-[#eeeeee]/8 rounded-full px-3 py-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-[#dae536]" />
       {text}
     </span>
@@ -108,7 +128,7 @@ function DeliverableTag({ text }: { text: string }) {
 
 function FeaturedCard({ service }: { service: ServiceCard }) {
   return (
-    <div className="reveal lg:col-span-2 gradient-border bg-motim-card rounded-2xl p-8 lg:p-10 border border-[#eeeeee]/8 hover:bg-motim-surface transition-all duration-500 group">
+    <div className="reveal lg:col-span-2 gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/5">
           <div className="flex items-center gap-3 mb-4">
@@ -128,10 +148,10 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
         <div className="lg:w-3/5">
           <p className="text-motim-muted text-base leading-relaxed mb-6">
             {service.description}{" "}
-            <strong className="text-[#eeeeee]">{service.highlight}</strong> para que o
-            perfil tenha direção, consistência e autoridade. Cada mês começa com
-            planejamento estratégico e produção de conteúdos pensados para fortalecer a
-            presença digital da sua empresa.
+            <strong className="text-[#eeeeee]">{service.highlight}</strong> para
+            que o perfil tenha direção, consistência e autoridade. Cada mês
+            começa com planejamento estratégico e produção de conteúdos pensados
+            para fortalecer a presença digital da sua empresa.
           </p>
           <div className="flex flex-wrap gap-2 mb-8">
             {service.deliverables.map((d, i) => (
@@ -153,7 +173,7 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
 
 function StandardCard({ service }: { service: ServiceCard }) {
   return (
-    <div className="reveal gradient-border bg-motim-card rounded-2xl p-8 lg:p-10 border border-[#eeeeee]/8 hover:bg-motim-surface transition-all duration-500 group">
+    <div className="reveal gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <span className="font-display text-5xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all">
         {service.number}
       </span>
@@ -164,8 +184,8 @@ function StandardCard({ service }: { service: ServiceCard }) {
       </h3>
       <p className="text-motim-muted text-sm leading-relaxed mb-5">
         {service.description}{" "}
-        <strong className="text-[#eeeeee]">{service.highlight}</strong>
-        {" "}e fortalecem o reconhecimento da marca.
+        <strong className="text-[#eeeeee]">{service.highlight}</strong> e
+        fortalecem o reconhecimento da marca.
       </p>
       <div className="flex flex-wrap gap-2 mb-6">
         {service.deliverables.map((d, i) => (
@@ -185,7 +205,7 @@ function StandardCard({ service }: { service: ServiceCard }) {
 
 function WideCard({ service }: { service: ServiceCard }) {
   return (
-    <div className="reveal lg:col-span-2 gradient-border bg-motim-card rounded-2xl p-8 lg:p-10 border border-[#eeeeee]/8 hover:bg-motim-surface transition-all duration-500 group">
+    <div className="reveal lg:col-span-2 gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/5">
           <span className="font-display text-5xl lg:text-6xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all">
@@ -201,7 +221,8 @@ function WideCard({ service }: { service: ServiceCard }) {
           <p className="text-motim-muted text-base leading-relaxed mb-6">
             {service.description}{" "}
             <strong className="text-[#eeeeee]">{service.highlight}</strong>{" "}
-            Desenvolvemos páginas com foco em clareza, posicionamento e conversão.
+            Desenvolvemos páginas com foco em clareza, posicionamento e
+            conversão.
           </p>
           <div className="flex flex-wrap gap-2 mb-8">
             {service.deliverables.map((d, i) => (
@@ -223,18 +244,39 @@ function WideCard({ service }: { service: ServiceCard }) {
 
 export default function Services() {
   return (
-    <section id="servicos" className="relative bg-noise py-24 lg:py-32 bg-motim-bg">
+    <section id="servicos" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* ── Cinematic Background Layer ── */}
+      {/* Background Image — grayscale + blur */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/backstage/backstage_6.jpeg"
+          alt=""
+          fill
+          className="object-cover object-[70%_center] grayscale blur-sm"
+          sizes="110vw"
+          quality={60}
+          priority={false}
+        />
+      </div>
+
+      {/* Dark overlay — #252525 at 85% opacity */}
+      <div className="absolute inset-0 z-[1] bg-motim-bg/85" />
+
+      {/* Noise texture layer */}
+      <div className="absolute inset-0 z-[2] bg-noise pointer-events-none" />
+
       {/* Decorative vertical lines */}
-      <div className="absolute inset-0 flex justify-between px-4 pointer-events-none opacity-[0.03] z-0">
+      <div className="absolute inset-0 flex justify-between px-4 pointer-events-none opacity-[0.03] z-[3]">
         {Array.from({ length: 8 }).map((_, i) => (
           <div key={i} className="w-px bg-[#eeeeee] h-full" />
         ))}
       </div>
 
+      {/* ── Foreground Content ── */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 reveal">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 bg-[#eeeeee]/[0.04] border border-[#eeeeee]/10 text-[#eeeeee]/70">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 bg-[#eeeeee]/[0.04] border border-[#eeeeee]/10 text-[#eeeeee]/70 backdrop-blur-sm">
             Nossas Soluções
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#eeeeee]">

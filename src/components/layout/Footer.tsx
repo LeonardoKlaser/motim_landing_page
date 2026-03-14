@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function InstagramIcon() {
   return (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -17,16 +19,22 @@ function WhatsAppIconSmall() {
 export default function Footer() {
   return (
     <footer className="border-t border-[#eeeeee]/5 bg-motim-bg">
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <a href="#" className="font-display text-xl font-extrabold text-[#eeeeee]">
-            motim
+      <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 h-16">
+          <a href="#" className="flex items-center h-full py-1">
+            <Image
+              src="/assets/logos/logo_motim_noBackground.png"
+              alt="Motim"
+              width={500}
+              height={500}
+              className="h-full w-auto"
+            />
           </a>
           <p className="text-sm text-motim-dim">
             &copy; 2026 Motim. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-motim-muted hover:text-[#eeeeee] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/agenciamotim?igsh=c2VxbWh4M25xMHcy" target="_blank" rel="noopener noreferrer" className="text-motim-muted hover:text-[#eeeeee] transition-colors" aria-label="Instagram">
               <InstagramIcon />
             </a>
             <a

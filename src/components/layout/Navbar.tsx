@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,16 +25,23 @@ export default function Navbar() {
         borderBottom: scrolled ? "1px solid rgba(238,238,238,0.06)" : "none",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="font-display text-2xl font-extrabold tracking-tight text-[#eeeeee]">
-          motim
+        <a href="#" className="flex items-center h-full py-1">
+          <Image
+            src="/assets/logos/logo_motim_noBackground.png"
+            alt="Motim"
+            width={500}
+            height={500}
+            className="h-full w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#sobre" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Sobre</a>
           <a href="#servicos" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Serviços</a>
+          <a href="#socios" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Sócios</a>
           <a href="#processo" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Processo</a>
           <a href="#resultados" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Resultados</a>
           <a href="#contato" className="inline-flex items-center gap-2 bg-[#dae536] text-[#252525] text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300">
@@ -63,8 +71,8 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden border-t border-[#eeeeee]/5">
           <div className="px-6 py-6 flex flex-col gap-4" style={{ background: "rgba(37,37,37,0.95)" }}>
-            <a href="#sobre" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Sobre</a>
             <a href="#servicos" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Serviços</a>
+            <a href="#socios" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Sócios</a>
             <a href="#processo" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Processo</a>
             <a href="#resultados" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Resultados</a>
             <a href="#contato" onClick={closeMenu} className="inline-flex items-center justify-center gap-2 bg-[#dae536] text-[#252525] text-sm font-semibold px-5 py-3 rounded-full mt-2">
