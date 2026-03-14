@@ -23,7 +23,7 @@ export default function Footer() {
             motim
           </a>
           <p className="text-sm text-motim-dim">
-            &copy; 2025 Motim. Todos os direitos reservados.
+            &copy; 2026 Motim. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-motim-muted hover:text-[#eeeeee] transition-colors" aria-label="Instagram">
