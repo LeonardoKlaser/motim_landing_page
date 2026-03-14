@@ -39,7 +39,7 @@ const items = [
 
 export default function Target() {
   return (
-    <section className="relative bg-noise py-24 lg:py-32 bg-motim-bg">
+    <section className="relative bg-noise pt-6 pb-24 lg:pt-8 lg:pb-32 bg-motim-bg">
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         <div className="reveal text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 bg-[#eeeeee]/[0.04] border border-[#eeeeee]/10 text-[#eeeeee]/70">

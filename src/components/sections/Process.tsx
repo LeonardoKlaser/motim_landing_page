@@ -27,7 +27,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="processo" className="relative bg-noise py-24 lg:py-32 bg-motim-bg">
+    <section id="processo" className="relative bg-noise pt-6 pb-24 lg:pt-8 lg:pb-32 bg-motim-bg">
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20 reveal">

@@ -7,7 +7,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="sobre" className="relative bg-noise py-24 lg:py-32 bg-motim-bg">
+    <section id="sobre" className="relative bg-noise pt-6 pb-24 lg:pt-8 lg:pb-32 bg-motim-bg">
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div className="reveal bg-motim-card rounded-2xl overflow-hidden border border-[#eeeeee]/8 relative">
           {/* Accent top border — verde lima fino */}
