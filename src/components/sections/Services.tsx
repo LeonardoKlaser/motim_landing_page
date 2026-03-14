@@ -132,14 +132,22 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/5">
           <div className="flex items-center gap-3 mb-4">
-            <span className="font-display text-5xl lg:text-6xl font-extrabold text-[#eeeeee]/20 group-hover:text-[#eeeeee]/40 transition-all">
+            <span className="font-display text-5xl lg:text-6xl font-extrabold text-[#eeeeee]/20 group-hover:text-[#eeeeee]/40 transition-all shrink-0 leading-none">
               {service.number}
             </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-[#dae536] text-[#252525]">
+            <div className="lg:hidden">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-[#dae536] text-[#252525] mb-1">
+                Destaque
+              </span>
+              <h3 className="font-display text-2xl font-bold text-[#eeeeee] leading-tight">
+                {service.title} {service.titleBreak}
+              </h3>
+            </div>
+            <span className="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase bg-[#dae536] text-[#252525]">
               Destaque
             </span>
           </div>
-          <h3 className="font-display text-2xl lg:text-3xl font-bold text-[#eeeeee] leading-tight mb-2">
+          <h3 className="hidden lg:block font-display text-2xl lg:text-3xl font-bold text-[#eeeeee] leading-tight mb-2">
             {service.title}
             <br />
             {service.titleBreak}
@@ -174,14 +182,17 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
 function StandardCard({ service }: { service: ServiceCard }) {
   return (
     <div className="reveal gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
-      <span className="font-display text-5xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all">
-        {service.number}
-      </span>
-      <h3 className="font-display text-2xl font-bold text-[#eeeeee] leading-tight mt-3 mb-4">
-        {service.title}
-        <br />
-        {service.titleBreak}
-      </h3>
+      <div className="flex items-center gap-4 mb-4 lg:block">
+        <span className="font-display text-5xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all shrink-0 leading-none">
+          {service.number}
+        </span>
+        <h3 className="font-display text-2xl font-bold text-[#eeeeee] leading-tight lg:mt-3">
+          {service.title}{" "}
+          <span className="lg:hidden">{service.titleBreak}</span>
+          <br className="hidden lg:block" />
+          <span className="hidden lg:inline">{service.titleBreak}</span>
+        </h3>
+      </div>
       <p className="text-motim-muted text-sm leading-relaxed mb-5">
         {service.description}{" "}
         <strong className="text-[#eeeeee]">{service.highlight}</strong> e
@@ -208,14 +219,17 @@ function WideCard({ service }: { service: ServiceCard }) {
     <div className="reveal lg:col-span-2 gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/5">
-          <span className="font-display text-5xl lg:text-6xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all">
-            {service.number}
-          </span>
-          <h3 className="font-display text-2xl lg:text-3xl font-bold text-[#eeeeee] leading-tight mt-3 mb-2">
-            {service.title}
-            <br />
-            {service.titleBreak}
-          </h3>
+          <div className="flex items-center gap-4 lg:block">
+            <span className="font-display text-5xl lg:text-6xl font-extrabold text-[#eeeeee]/15 group-hover:text-[#eeeeee]/30 transition-all shrink-0 leading-none">
+              {service.number}
+            </span>
+            <h3 className="font-display text-2xl lg:text-3xl font-bold text-[#eeeeee] leading-tight lg:mt-3 lg:mb-2">
+              {service.title}{" "}
+              <span className="lg:hidden">{service.titleBreak}</span>
+              <br className="hidden lg:block" />
+              <span className="hidden lg:inline">{service.titleBreak}</span>
+            </h3>
+          </div>
         </div>
         <div className="lg:w-3/5">
           <p className="text-motim-muted text-base leading-relaxed mb-6">

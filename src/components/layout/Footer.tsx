@@ -34,7 +34,13 @@ export default function Footer() {
             &copy; 2026 Motim. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/agenciamotim?igsh=c2VxbWh4M25xMHcy" target="_blank" rel="noopener noreferrer" className="text-motim-muted hover:text-[#eeeeee] transition-colors" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/agenciamotim?igsh=c2VxbWh4M25xMHcy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-motim-muted hover:text-[#eeeeee] transition-colors"
+              aria-label="Instagram"
+            >
               <InstagramIcon />
             </a>
             <a
