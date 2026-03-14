@@ -40,10 +40,19 @@
   }
 
   /* ── Scrollbar ── */
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #252525; }
-  ::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #555; }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #252525;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 /* ── Custom Utilities ── */
@@ -74,14 +83,19 @@
   }
 
   .gradient-border::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(238,238,238,0.15), rgba(218,229,54,0.3));
+    background: linear-gradient(
+      135deg,
+      rgba(238, 238, 238, 0.15),
+      rgba(218, 229, 54, 0.3)
+    );
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
@@ -94,7 +108,7 @@
 
   /* Noise Texture */
   .bg-noise::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     opacity: 0.02;
@@ -105,23 +119,58 @@
 
   /* Process Line (monocromático com toque de verde) */
   .process-line {
-    background: linear-gradient(90deg, rgba(238,238,238,0.2), #dae536, rgba(238,238,238,0.2));
+    background: linear-gradient(
+      90deg,
+      rgba(238, 238, 238, 0.2),
+      #dae536,
+      rgba(238, 238, 238, 0.2)
+    );
   }
 
   /* Animations */
-  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out both; }
-  .animate-fade-in    { animation: fadeIn 0.6s ease-out both; }
-  .animate-float      { animation: float 6s ease-in-out infinite; }
-  .animate-pulse-orb  { animation: pulseOrb 4s ease-in-out infinite; }
-  .animate-drift      { animation: drift 20s ease-in-out infinite; }
-  .animate-marquee    { animation: marquee 30s linear infinite; }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out both;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out both;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-pulse-orb {
+    animation: pulseOrb 4s ease-in-out infinite;
+  }
+  .animate-drift {
+    animation: drift 20s ease-in-out infinite;
+  }
+  .animate-marquee {
+    animation: marquee 50s linear infinite;
+  }
 
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
-  .delay-400 { animation-delay: 0.4s; }
-  .delay-500 { animation-delay: 0.5s; }
-  .delay-600 { animation-delay: 0.6s; }
+  @media (max-width: 768px) {
+    .animate-marquee {
+      animation: marquee 35s linear infinite;
+    }
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
 
   /* Scroll Reveal */
   .reveal {
@@ -138,34 +187,71 @@
 
 /* ── Keyframes (outside layers — they don't participate in cascade) ── */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33%      { transform: translateY(-12px) rotate(1deg); }
-  66%      { transform: translateY(4px) rotate(-1deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-1deg);
+  }
 }
 
 @keyframes pulseOrb {
-  0%, 100% { transform: scale(1); opacity: 0.4; }
-  50%      { transform: scale(1.15); opacity: 0.6; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.6;
+  }
 }
 
 @keyframes drift {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25%      { transform: translate(30px, -20px) scale(1.05); }
-  50%      { transform: translate(-10px, 15px) scale(0.95); }
-  75%      { transform: translate(-25px, -10px) scale(1.02); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  50% {
+    transform: translate(-10px, 15px) scale(0.95);
+  }
+  75% {
+    transform: translate(-25px, -10px) scale(1.02);
+  }
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

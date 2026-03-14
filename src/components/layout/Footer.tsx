@@ -30,7 +30,7 @@ export default function Footer() {
               <InstagramIcon />
             </a>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5548999165373"
               target="_blank"
               rel="noopener noreferrer"
               className="text-motim-muted hover:text-[#eeeeee] transition-colors"

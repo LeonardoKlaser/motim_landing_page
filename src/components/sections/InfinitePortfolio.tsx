@@ -31,7 +31,7 @@ const portfolioItems = [
 export default function InfinitePortfolio() {
   return (
     <section className="w-full overflow-hidden bg-motim-bg py-12">
-      <div className="animate-marquee flex items-center gap-6">
+      <div className="animate-marquee flex w-max items-center gap-6">
         {[...portfolioItems, ...portfolioItems].map((item, i) => (
           <div
             key={i}
