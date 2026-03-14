@@ -31,8 +31,8 @@ export default function Navbar() {
           <Image
             src="/assets/logos/logo_motim_noBackground.png"
             alt="Motim"
-            width={500}
-            height={500}
+            width={496}
+            height={194}
             className="h-full w-auto"
             priority
           />
@@ -40,6 +40,7 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
+          <a href="#sobre" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Sobre</a>
           <a href="#servicos" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Serviços</a>
           <a href="#socios" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Sócios</a>
           <a href="#processo" className="text-sm text-motim-muted hover:text-[#eeeeee] transition-colors duration-300">Processo</a>
@@ -71,6 +72,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden border-t border-[#eeeeee]/5">
           <div className="px-6 py-6 flex flex-col gap-4" style={{ background: "rgba(37,37,37,0.95)" }}>
+            <a href="#sobre" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Sobre</a>
             <a href="#servicos" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Serviços</a>
             <a href="#socios" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Sócios</a>
             <a href="#processo" onClick={closeMenu} className="text-motim-muted hover:text-[#eeeeee] transition-colors py-2">Processo</a>

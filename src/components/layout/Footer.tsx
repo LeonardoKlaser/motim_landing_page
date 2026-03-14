@@ -25,8 +25,8 @@ export default function Footer() {
             <Image
               src="/assets/logos/logo_motim_noBackground.png"
               alt="Motim"
-              width={500}
-              height={500}
+              width={496}
+              height={194}
               className="h-full w-auto"
             />
           </a>
