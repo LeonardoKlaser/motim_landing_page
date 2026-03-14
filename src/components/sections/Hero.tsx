@@ -7,7 +7,7 @@ export default function Hero() {
       <section className="relative min-h-screen overflow-hidden flex items-center">
         {/* ── Cinematic Background Image (P&B + Overlay) ── */}
         <Image
-          src="/assets/hero-section/hero-bg_1.jpg"
+          src="/assets/hero-section/hero-bg_1.jpeg"
           alt=""
           fill
           priority
@@ -103,25 +103,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* ═══════════ BRAND STRIP ═══════════ */}
-      <section className="bg-motim-bg py-6 overflow-hidden border-t border-b border-[#eeeeee]/5">
-        <div className="animate-marquee flex items-center gap-12 whitespace-nowrap">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <span key={i} className="contents">
-              <span
-                className={`font-display text-6xl lg:text-8xl font-extrabold ${
-                  i % 2 === 0
-                    ? "text-[#eeeeee]/[0.06]"
-                    : "text-[#eeeeee]/[0.02]"
-                }`}
-              >
-                motim
-              </span>
-              <span className="text-motim-dim text-2xl">&#x2726;</span>
-            </span>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

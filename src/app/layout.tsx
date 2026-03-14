@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${outfit.variable} ${dmSans.variable}`}>
-      <body>{children}</body>
+    <html lang="pt-BR" className={`${outfit.variable} ${dmSans.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
