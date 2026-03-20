@@ -50,20 +50,22 @@ interface Partner {
 const partners: Partner[] = [
   {
     name: "Gabriela",
-    role: "Co-fundadora & Diretora Criativa",
+    role: "Fundadora & Diretora Criativa",
     bio: "Gabi é a fundadora da Motim, mente criativa e estrategista por trás da agência. Especialista em marketing e posicionamento de marcas, lidera o desenvolvimento das estratégias que estruturam cada projeto, unindo visão de marca, conteúdo e direção criativa. Seu trabalho é transformar negócios em marcas fortes, com presença digital consistente, comunicação estratégica e posicionamento claro no mercado.",
     photo: "/assets/socios/foto_socio_2.jpeg",
+    photoPosition: "center 30%",
   },
   {
     name: "André",
     role: "Co-fundador & Diretor de Produção",
     bio: "André é fotógrafo e videomaker há mais de 5 anos e sócio da Motim. Dedicado a eternizar momentos com sensibilidade e autenticidade, é especializado na criação de vídeos e fotos que contam histórias e refletem a essência de cada marca e de cada pessoa. Acredita que cada projeto é único e merece ser tratado com esse cuidado. Na Motim, é responsável pela direção e produção audiovisual, transformando ideias em imagens que comunicam, conectam e permanecem.",
     photo: "/assets/socios/foto_socio_3.jpeg",
-    photoPosition: "center 35%",
+    photoPosition: "center 25%",
   },
 ];
 
 function PartnerCard({ partner }: { partner: Partner }) {
+  const isGabriela = partner.name === "Gabriela";
   return (
     <div className="reveal group flex flex-col items-center text-center lg:items-start lg:text-left">
       {/* Photo Container */}
@@ -76,7 +78,9 @@ function PartnerCard({ partner }: { partner: Partner }) {
             src={partner.photo}
             alt={partner.name}
             fill
-            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            className={`object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ${
+              isGabriela ? "scale-125 origin-center" : ""
+            }`}
             style={
               partner.photoPosition
                 ? { objectPosition: partner.photoPosition }
@@ -150,9 +154,9 @@ export default function Partners() {
             Os Sócios
           </span>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-[#eeeeee]">
-            Quem faz
+          Conheça Nossos
             <br />
-            <span className="text-[#dae536]">acontecer</span>
+            <span className="text-[#dae536]">Fundadores</span>
           </h2>
         </div>
 

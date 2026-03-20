@@ -6,14 +6,14 @@ import { Maximize2, X } from "lucide-react";
 
 const socialProofData = [
   { id: 1, src: "/assets/feedbacks/feedback_1.jpeg", alt: "Depoimento cliente 1", category: "DEPOIMENTO REAL" },
-  { id: 2, src: "/assets/insta/feed_client1.jpeg", alt: "Feed estratégico 1", category: "DESIGN ESTRATÉGICO" },
+  { id: 2, src: "/assets/insta/feed_client1.jpeg", alt: "Feed estratégico 1", category: "GESTÃO DE REDE SOCIAL" },
   { id: 3, src: "/assets/feedbacks/feedback_2.jpeg", alt: "Depoimento cliente 2", category: "DEPOIMENTO REAL" },
   { id: 4, src: "/assets/feedbacks/feedback_3.jpeg", alt: "Depoimento cliente 3", category: "DEPOIMENTO REAL" },
-  { id: 5, src: "/assets/insta/feed_client2.jpeg", alt: "Feed estratégico 2", category: "DESIGN ESTRATÉGICO" },
+  { id: 5, src: "/assets/insta/feed_client2.jpeg", alt: "Feed estratégico 2", category: "GESTÃO DE REDE SOCIAL" },
   { id: 6, src: "/assets/feedbacks/feedback_4.jpeg", alt: "Depoimento cliente 4", category: "DEPOIMENTO REAL" },
-  { id: 7, src: "/assets/insta/feed_client3.jpeg", alt: "Feed estratégico 3", category: "DESIGN ESTRATÉGICO" },
+  { id: 7, src: "/assets/insta/feed_client3.jpeg", alt: "Feed estratégico 3", category: "GESTÃO DE REDE SOCIAL" },
   { id: 8, src: "/assets/feedbacks/feedback_5.jpeg", alt: "Depoimento cliente 5", category: "DEPOIMENTO REAL" },
-  { id: 9, src: "/assets/insta/feed_client4.jpeg", alt: "Feed estratégico 4", category: "DESIGN ESTRATÉGICO" },
+  { id: 9, src: "/assets/insta/feed_client4.jpeg", alt: "Feed estratégico 4", category: "GESTÃO DE REDE SOCIAL" },
   { id: 10, src: "/assets/feedbacks/feedback_6.jpeg", alt: "Depoimento cliente 6", category: "DEPOIMENTO REAL" },
 ];
 
