@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const backstageImages = [
   { src: "/assets/backstage/backstage_1.jpeg", alt: "Bastidores 1" },
-  { src: "/assets/backstage/backstage_2.jpeg", alt: "Bastidores 2" },
+  { src: "/assets/backstage/backstage_5.jpeg", alt: "Bastidores 2" },
   { src: "/assets/backstage/backstage_3.jpeg", alt: "Bastidores 3" },
   { src: "/assets/backstage/backstage_4.jpeg", alt: "Bastidores 4" },
 ];
@@ -22,7 +22,7 @@ export default function Backstage() {
             <span className="text-[#dae536]">Uma equipe real</span> de produção.
           </h2>
 
-          <p className="text-motim-muted text-base md:text-lg leading-relaxed">
+          <p className="text-motim-muted text-lg md:text-xl leading-relaxed">
             Atrás de cada grande marca existe uma operação robusta. Na Motim, não
             dependemos de templates amadores. Contamos com equipamento
             profissional de captação, estúdio próprio e uma equipe de

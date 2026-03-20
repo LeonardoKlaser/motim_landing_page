@@ -26,7 +26,7 @@ export default function Cta() {
             Ela merece <span className="text-[#dae536]">estratégia.</span>
           </h2>
 
-          <p className="text-motim-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
+          <p className="text-motim-muted text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-12">
             Se você quer estruturar o marketing da sua empresa e crescer nas redes sociais
             com planejamento e conteúdo profissional, fale com a equipe Motim.
           </p>

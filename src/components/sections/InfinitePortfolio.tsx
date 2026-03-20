@@ -5,7 +5,6 @@ const portfolioItems = [
   { src: "/assets/portfolio/portfolio_2.jpeg", alt: "Criativo 2" },
   { src: "/assets/portfolio/portfolio_3.jpeg", alt: "Criativo 3" },
   { src: "/assets/portfolio/portfolio_4.jpeg", alt: "Criativo 4" },
-  { src: "/assets/portfolio/portfolio_5.jpeg", alt: "Criativo 5" },
   { src: "/assets/portfolio/portfolio_6.jpeg", alt: "Criativo 6" },
   { src: "/assets/portfolio/portfolio_7.jpeg", alt: "Criativo 7" },
   { src: "/assets/portfolio/portfolio_8.jpeg", alt: "Criativo 8" },

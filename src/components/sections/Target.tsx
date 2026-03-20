@@ -60,7 +60,7 @@ export default function Target() {
               <div className="w-14 h-14 mx-auto rounded-xl bg-[#dae536] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
               </div>
-              <p className="text-[#eeeeee] text-base font-medium leading-relaxed">
+              <p className="text-[#eeeeee] text-lg font-medium leading-relaxed">
                 {item.text}
               </p>
             </div>

@@ -63,7 +63,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="animate-fade-in-up delay-200 text-base md:text-lg text-motim-muted leading-relaxed max-w-2xl mb-10">
+          <p className="animate-fade-in-up delay-200 text-lg md:text-xl text-motim-muted leading-relaxed max-w-2xl mb-10">
             Na Motim nós planejamos, produzimos e executamos tudo que a sua
             marca precisa para crescer nas redes sociais: estratégia, conteúdo,
             vídeos, fotografia, design e presença digital.

@@ -96,11 +96,11 @@ function PartnerCard({ partner }: { partner: Partner }) {
           {partner.name}
         </h3>
 
-        <p className="text-[#dae536] font-display text-sm font-semibold tracking-wide uppercase mb-4">
+        <p className="text-[#dae536] font-display text-base font-semibold tracking-wide uppercase mb-4">
           {partner.role}
         </p>
 
-        <p className="text-motim-muted text-sm leading-relaxed mb-6">
+        <p className="text-motim-muted text-base leading-relaxed mb-6">
           {partner.bio}
         </p>
 

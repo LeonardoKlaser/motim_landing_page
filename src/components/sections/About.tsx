@@ -31,7 +31,7 @@ export default function About() {
                     <span className="text-[#dae536]"> marketing da sua marca.</span>
                   </h2>
 
-                  <p className="text-motim-muted text-base md:text-lg leading-relaxed mb-6">
+                  <p className="text-motim-muted text-lg md:text-xl leading-relaxed mb-6">
                     A Motim organiza e estrutura o marketing da sua marca. Nós cuidamos da{" "}
                     <strong className="text-[#eeeeee]">
                       estratégia, da produção de conteúdo e da presença digital
@@ -39,7 +39,7 @@ export default function About() {
                     da sua empresa para que você tenha um posicionamento profissional nas redes
                     sociais.
                   </p>
-                  <p className="text-motim-muted text-base md:text-lg leading-relaxed mb-10">
+                  <p className="text-motim-muted text-lg md:text-xl leading-relaxed mb-10">
                     Isso inclui{" "}
                     <strong className="text-[#eeeeee]">
                       planejamento, produção de vídeos, fotografia, design
@@ -58,7 +58,7 @@ export default function About() {
                       <p className="font-display text-2xl font-bold text-[#dae536]">
                         {stat.value}
                       </p>
-                      <p className="text-xs text-motim-muted mt-1">{stat.label}</p>
+                      <p className="text-sm text-motim-muted mt-1">{stat.label}</p>
                     </div>
                   ))}
                 </div>

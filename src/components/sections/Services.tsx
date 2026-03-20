@@ -119,7 +119,7 @@ function ChevronIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 
 function DeliverableTag({ text }: { text: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs text-motim-muted bg-[#252525]/60 backdrop-blur-sm border border-[#eeeeee]/8 rounded-full px-3 py-1.5">
+    <span className="inline-flex items-center gap-1.5 text-sm text-motim-muted bg-[#252525]/60 backdrop-blur-sm border border-[#eeeeee]/8 rounded-full px-3 py-1.5">
       <span className="w-1.5 h-1.5 rounded-full bg-[#dae536]" />
       {text}
     </span>
@@ -154,7 +154,7 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
           </h3>
         </div>
         <div className="lg:w-3/5">
-          <p className="text-motim-muted text-base leading-relaxed mb-6">
+          <p className="text-motim-muted text-lg leading-relaxed mb-6">
             {service.description}{" "}
             <strong className="text-[#eeeeee]">{service.highlight}</strong> para
             que o perfil tenha direção, consistência e autoridade. Cada mês
@@ -193,7 +193,7 @@ function StandardCard({ service }: { service: ServiceCard }) {
           <span className="hidden lg:inline">{service.titleBreak}</span>
         </h3>
       </div>
-      <p className="text-motim-muted text-sm leading-relaxed mb-5">
+      <p className="text-motim-muted text-base leading-relaxed mb-5">
         {service.description}{" "}
         <strong className="text-[#eeeeee]">{service.highlight}</strong> e
         fortalecem o reconhecimento da marca.
@@ -232,7 +232,7 @@ function WideCard({ service }: { service: ServiceCard }) {
           </div>
         </div>
         <div className="lg:w-3/5">
-          <p className="text-motim-muted text-base leading-relaxed mb-6">
+          <p className="text-motim-muted text-lg leading-relaxed mb-6">
             {service.description}{" "}
             <strong className="text-[#eeeeee]">{service.highlight}</strong>{" "}
             Desenvolvemos páginas com foco em clareza, posicionamento e
