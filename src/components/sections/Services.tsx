@@ -127,6 +127,9 @@ function DeliverableTag({ text }: { text: string }) {
 }
 
 function FeaturedCard({ service }: { service: ServiceCard }) {
+  const whatsappUrl = `https://wa.me/5548999165373?text=${encodeURIComponent(
+    `Olá, ${service.cta}!`
+  )}`;
   return (
     <div className="reveal lg:col-span-2 gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-8">
@@ -167,8 +170,10 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
             ))}
           </div>
           <a
-            href="#contato"
-            className="inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-6 py-3 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-6 py-3 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
           >
             {service.cta}
             <ArrowIcon />
@@ -180,6 +185,9 @@ function FeaturedCard({ service }: { service: ServiceCard }) {
 }
 
 function StandardCard({ service }: { service: ServiceCard }) {
+  const whatsappUrl = `https://wa.me/5548999165373?text=${encodeURIComponent(
+    `Olá, ${service.cta}!`
+  )}`;
   return (
     <div className="reveal gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex items-center gap-4 mb-4 lg:block">
@@ -204,17 +212,22 @@ function StandardCard({ service }: { service: ServiceCard }) {
         ))}
       </div>
       <a
-        href="#contato"
-        className="inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-5 py-2.5 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-6 py-3 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
       >
         {service.cta}
-        <ChevronIcon />
+        <ArrowIcon />
       </a>
     </div>
   );
 }
 
 function WideCard({ service }: { service: ServiceCard }) {
+  const whatsappUrl = `https://wa.me/5548999165373?text=${encodeURIComponent(
+    `Olá, ${service.cta}!`
+  )}`;
   return (
     <div className="reveal lg:col-span-2 gradient-border subtle-border bg-motim-card/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 hover:bg-motim-surface/90 transition-all duration-500 group">
       <div className="flex flex-col lg:flex-row gap-8">
@@ -244,8 +257,10 @@ function WideCard({ service }: { service: ServiceCard }) {
             ))}
           </div>
           <a
-            href="#contato"
-            className="inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-6 py-3 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 inline-flex items-center gap-2 bg-[#dae536] text-[#252525] font-semibold px-6 py-3 rounded-full text-sm hover:shadow-lg hover:shadow-[#dae536]/20 hover:scale-105 transition-all duration-300"
           >
             {service.cta}
             <ArrowIcon />
